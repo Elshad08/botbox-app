@@ -1,0 +1,53 @@
+@import url('https://rsms.me/inter/inter.css');
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+#livechat {
+    width: 20%;
+    background-color: #23374d;
+    height: 1200px;
+}
+
+.logo1 img {
+    background-color: #ffffff;
+}
+
+.logo1 {
+    color: #ffffff;
+}
+
+.n-items {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-bottom: 20%;
+}
+
+.divisor {
+    border-bottom: 1px solid #ffffff;
+}
+
+.st {
+    display: block;
+    margin-bottom: 7%;
+}
+
+.groups .n-items {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.groups .st img {
+    border-radius: 50%;
+}
