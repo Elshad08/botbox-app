@@ -14,9 +14,10 @@ import { ForgotSuccessComponent } from './Login/fgSuccess.component';
 import { ForgotFailComponent } from './Login/fgfail.component';
 
 import { LivechatComponent } from './Livechat/livechat.component';
-import { NavbarComponent } from './Livechat/navbar.component';
+
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarComponent } from './Menu/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ForgotSuccessComponent,
     ForgotFailComponent,
     RegisterComponent,
-
     LivechatComponent,
     NavbarComponent
+  
   ],
   imports: [
     BrowserModule,

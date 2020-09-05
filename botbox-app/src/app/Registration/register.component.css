@@ -1,204 +1,219 @@
-* {
-    font-family: Inter;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-}
-
-.login-items {
-    margin-left: 90px;
-}
-
-.blue-image {
-    width: 720px;
-    height: 100%;
-}
-
-.login-items .logo {
-    margin-top: 64px;
-    margin-bottom: 45px;
-}
-
-.noAccount {
-    font-size: 16px;
-    font-weight: 500;
-    color: #8a94a6;
-}
-
-.signIn {
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: #1089ff!important;
-    margin-bottom: 72px;
-    height: 56px;
-    width: 95%;
-}
-
-.form-control {
-    width: 95%;
-    margin-top: 40px;
-    height: 56px!important;
-    border-radius: 4px!important;
-}
-
-.form-group {
-    border-radius: 4px!important;
-}
-
-.container-fluid :first-child {
-    background-color: #ffffff;
-}
-
-.regForm {
-    width: 440px;
-}
-
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-@media (max-width: 575.98px) {
-    .blue-image {
-        display: none;
+    * {
+        font-family: Inter;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
     }
-}
-
-
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .blue-image {
-        display: none;
-    }
-}
-
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .blue-image {
-        display: none;
-    }
-}
-
-
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .blue-image {
-        display: 500px;
-    }
-}
-
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-    .blue-image {
-        width: 90%;
-    }
-}
-
-@media screen and (min-width: 992px),
-(max-width: 1280px) {
-    .blue-image {
-        width: 95%;
-    }
+    
     .login-items {
-        margin-left: 0px;
+        margin-left: 21%;
     }
+    
+    .blue-image {
+        position: fixed;
+        width: 55vw;
+        height: 100vh;
+    }
+    
     .login-items .logo {
-        margin-left: 0px;
+        margin-top: 10%;
+        margin-bottom: 7%;
     }
-    .regForm {
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-    }
-    .logo {
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-    }
+    
     .noAccount {
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
+        font-size: 1vw;
+        font-weight: 500;
+        color: #8a94a6;
     }
-}
-
-.socialBtn {
-    width: 204px;
-    height: 56px;
-    border-radius: 4px;
-    border: solid 1px #e5e5e5;
-}
-
-.fBtn {
-    float: right;
-}
-
-.fc {
-    margin-left: -15px;
-    margin-right: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.71;
-    letter-spacing: normal;
-    color: #1e2f42;
-}
-
-.welcome {
-    font-size: 34px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.41;
-    letter-spacing: normal;
-    color: #1e2f42;
-}
-
-.form-check {
-    padding-left: 0rem!important;
-}
-
-.form-check-label {
-    font-size: 14px;
-    margin-left: 25px;
-}
-
-.log-text {
-    font-size: 20px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    color: #1e2f42;
-}
-
-.s-btn {
-    font-size: 16px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #1e2f42;
-}
-
-::placeholder {
-    font-size: 16px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #b0b7c3;
-}
-
-.container-fluid {
-    padding: 0px;
-}
+    
+    .signIn {
+        font-size: 16px;
+        border-radius: 4px;
+        background-color: #1089ff!important;
+        margin-bottom: 10%;
+        height: 56px;
+    }
+    
+    .form-control {
+        margin-top: 8%;
+        height: 56px!important;
+        border-radius: 4px!important;
+    }
+    
+    .form-group {
+        border-radius: 4px!important;
+        width: 30vw;
+    }
+    
+    @media (max-width: 991.98px) {
+        .form-group {
+            width: 60vw;
+        }
+    }
+    
+    .container-fluid :first-child {
+        background-color: #ffffff;
+    }
+    /* Extra small devices (portrait phones, less than 576px) */
+    
+    @media (max-width: 575.98px) {
+        .blue-image {
+            display: none;
+        }
+    }
+    /* Small devices (landscape phones, 576px and up) */
+    
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .blue-image {
+            display: none;
+        }
+    }
+    /* Medium devices (tablets, 768px and up) */
+    
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .blue-image {
+            display: none;
+        }
+    }
+    /* Large devices (desktops, 992px and up) */
+    
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .blue-image {
+            width: 50vw;
+        }
+    }
+    /* Extra large devices (large desktops, 1200px and up) */
+    
+    @media screen and (min-width: 992px),
+    (max-width: 1280px) {
+        .login-items .logo {
+            margin-left: 0px;
+        }
+        .logo {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+        .noAccount {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+    }
+    
+    .socialBtn {
+        border-radius: 4px;
+        border: solid 1px #e5e5e5;
+        width: 45%;
+    }
+    
+    .fBtn {
+        float: right;
+    }
+    
+    .fc {
+        margin-left: -15px;
+        margin-right: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: #1e2f42;
+    }
+    
+    .welcome {
+        font-size: 2vw;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.41;
+        letter-spacing: normal;
+        color: #1e2f42;
+    }
+    
+    @media (max-width: 1199.98px) {
+        .welcome {
+            font-size: 5vw;
+        }
+        .noAccount {
+            font-size: 4vw;
+        }
+    }
+    
+    .form-check {
+        padding-left: 0rem!important;
+    }
+    
+    .form-check-label {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+    
+    .log-text {
+        display: block;
+        font-size: 10px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: #1e2f42;
+    }
+    
+    .pasImg {
+        position: absolute;
+        top: 62%;
+        right: 8%;
+    }
+    
+    @media screen and (max-width: 1280px) {
+        .pasImg {
+            display: none;
+        }
+    }
+    
+    .s-btn {
+        font-size: 1.5vw;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #1e2f42;
+    }
+    
+    .container-fluid {
+        padding: 0px;
+    }
+    
+    .regForm .form-group input {
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #1e2f42;
+    }
+    /* placeholer */
+    
+    input:focus::placeholder {
+        font-size: 10px;
+        position: relative;
+        top: -10px;
+        left: 3px;
+    }
+    
+     ::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #b0b7c3;
+        position: relative;
+    }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component ({
-    selector: 'app-nav',
+    selector: 'app-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: ['./livechat.component.css']
+    styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
 

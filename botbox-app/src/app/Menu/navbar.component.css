@@ -1,0 +1,15 @@
+.profile img {
+    height: 40px;
+    width: 70px;
+}
+
+.header-right {
+    display: contents;
+    float: right;
+    align-content: flex-end;
+}
+
+.centered-items .text-primary {
+    font-size: 18px;
+    border: 1px solid blue;
+}
