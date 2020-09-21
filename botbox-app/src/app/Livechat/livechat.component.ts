@@ -6,5 +6,32 @@ import { Component } from '@angular/core';
     styleUrls: ['./livechat.component.css']
 })
 export class LivechatComponent {
+    agents = {
+
+        name: ["Jeremías del Pozo", "Marshall Bruce Mathers", "Drake", "Katrina Bennett"],
+        age: [24, 12, 23]
+
+    };
+
+    isShow = false;
+    supportBot = false;
+
+    isCanned = false;
+  
+    supportToggle() {
+      this.supportBot = !this.supportBot;
+  
+    }
+  
+  
+    toggleDisplay() {
+      this.isShow = !this.isShow;
+    }
+
+    toggleCanned() {
+      this.isCanned =! this.isCanned;
+    }
+  
+ 
 
 }

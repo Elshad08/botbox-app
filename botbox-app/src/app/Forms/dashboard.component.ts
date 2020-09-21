@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+     arr = {
+
+        name: ["item1", "item2", "item3"],
+        age: [24, 12, 23]
+
+    };
+
+
 }

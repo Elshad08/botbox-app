@@ -1,28 +1,35 @@
-<!-- <app-login></app-login> -->
-
-<!-- <app-register></app-register> -->
-<!--  <app-forgot></app-forgot> -->
-
-<!-- <app-resetPass></app-resetPass> -->
+<router-outlet>
+</router-outlet>
 
 
-<!-- <forgot-success></forgot-success> 
-<forgot-fail></forgot-fail>
-
- -->
-
-<div class="header">
-
+<div id="main-app">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-xl-10 col-lg-10 first">
+                <app-navbar style="z-index:2"></app-navbar>
+                <div class="row">
+                    <div class="tt">
+                        <app-support></app-support>
+                    </div>
+                    <div class="ss">
+                        <app-livechat></app-livechat>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- <app-navbar></app-navbar> -->
 
-
-
-<!-- <router-outlet></router-outlet> -->
-<!-- <app-navbar></app-navbar> -->
-
-
-<app-sidebar></app-sidebar>
-<!-- 
-<app-dashboard></app-dashboard> -->
+<style>
+    .tt {
+        width: 27%;
+    }
+    
+    .ss {
+        width: 73%;
+    }
+</style>

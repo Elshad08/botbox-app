@@ -1,5 +1,6 @@
 * {
-    font-family: Inter;
+    font-family: Inter!important;
+    outline: none!important;
 }
 
 html {
@@ -30,6 +31,10 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: #8a94a6;
+}
+
+.noAccount .text-primary {
+    cursor: pointer;
 }
 
 .signIn {
@@ -94,7 +99,14 @@ body {
 
 @media (max-width: 991.98px) {
     .form-group {
-        width: 60vw;
+        width: 80vw;
+    }
+    .login-items .logo {
+        margin-top: 2%;
+        margin-bottom: 10%;
+    }
+    .welcome {
+        font-size: 24px!important;
     }
 }
 
@@ -119,7 +131,7 @@ body {
 }
 
 .regForm {
-    margin-left: 20%;
+    margin-left: 7%;
 }
 
 .fc {
@@ -204,7 +216,7 @@ body {
 }
 
 .frg {
-    margin-top: 64px;
+    margin-top: 5%;
 }
 
 .fg-pass h3 {
@@ -267,7 +279,13 @@ body {
 }
 
 .fg-pass img {
-    margin-top: 208px;
+    margin-top: 15%;
+}
+
+@media (max-width: 1024px) {
+    .fg-pass img {
+        margin-top: 50%;
+    }
 }
 
 .error-btn {
@@ -331,5 +349,3 @@ input:focus::placeholder {
     color: #b0b7c3;
     position: relative;
 }
-
-.clearfix {}

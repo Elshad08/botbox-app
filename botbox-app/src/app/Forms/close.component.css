@@ -1,0 +1,47 @@
+* {
+    font-family: Inter;
+    outline: none!important;
+}
+
+.modal-dialog .modal-body .btn-lg {
+    height: 45px;
+    width: 35%;
+}
+
+.modal-dialog .modal-body .btn-stop {
+    border-radius: 4px;
+    border: solid 1px #b0b7c3;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2f42;
+}
+
+.modal-dialog .modal-body .btn-go {
+    border-radius: 4px;
+    background-color: #00c564;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-dialog .modal-body {
+    margin-bottom: 5%;
+}
+
+.modal-warning {
+    padding: 3px 22px;
+}
+
+.modal-header {
+    border: none;
+}

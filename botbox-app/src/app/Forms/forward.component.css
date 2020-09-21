@@ -1,0 +1,284 @@
+* {
+    font-family: Inter;
+    outline: none!important;
+}
+
+.modal-dialog {
+    min-width: 20%;
+    margin-left: 80;
+    float: right;
+}
+
+.modal-dialog .modal-content {
+    min-height: 100vh;
+}
+
+.modal .modal-body .inputText {
+    padding-left: 2%;
+    padding-bottom: 48%;
+    width: 580px;
+    height: 264px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.modal-header {
+    border: none;
+}
+
+.bottom-form {
+    height: 56px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    margin-top: 2%;
+}
+
+.shortcut-text {
+    text-align: initial;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #b0b7c3;
+}
+
+.canned-text {
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1e2f42;
+    text-align: initial;
+}
+
+.modal-header .save {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+.mini-text {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #0da8c7;
+    text-align: initial;
+}
+
+.btn-cancel {
+    width: 184px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2f42;
+    border-radius: 4px;
+    border: solid 1px #b0b7c3;
+}
+
+.btn-save {
+    width: 184px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #c9ced6;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.form-top .inputText {
+    width: 580px;
+    height: 264px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+}
+
+input:focus~.floating-label,
+input:not(:focus):valid~.floating-label {
+    /* top: 35px;
+    left: 20px;
+    font-size: 10px;
+    opacity: 1; */
+    display: none;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 130px;
+    transition: 0.1s ease all;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.form-bottom .inputText-sm {
+    width: 580px;
+    height: 56px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    background-color: #ffffff;
+}
+
+.form-bottom input::placeholder {
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+
+.form-items .search-item {
+    position: absolute;
+    left: 12px;
+    bottom: 26px;
+}
+
+.form-items .collapseBtn {
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+}
+
+.forward-item {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #b0b7c3;
+    position: absolute;
+    left: 40px;
+    bottom: 26px;
+}
+
+.dropdown .dropdown-menu {
+    width: 580px;
+    height: 656px;
+    border-radius: 4px;
+    box-shadow: 0 16px 26px -1px rgba(10, 22, 70, 0.1), 0 0 1px 0 rgba(10, 22, 70, 0.06);
+    background-color: #ffffff;
+    border: none;
+}
+
+.dropdown-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 160px;
+    float: left;
+    margin-right: 16px;
+}
+
+.dropdown-menu .teammates {
+    padding: 24px 0 0 24px;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+.dropdown-item .wrap .user-name {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.chat-details {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+    margin-top: -10px;
+}
+
+.user-item {
+    margin-left: 16px;
+}
+
+.dropdown-item {
+    margin-left: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f2f4;
+}
+
+.text-left {
+    position: absolute;
+    bottom: 120px;
+    left: 25px;
+}
+
+.text-right {
+    position: absolute;
+    right: 12px;
+    bottom: 120px;
+}
+
+.text-left svg {
+    margin-right: 17px;
+}
+
+.form-top input {
+    padding-top: 1%;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden!important;
+}

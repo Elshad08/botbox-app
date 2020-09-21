@@ -10,8 +10,8 @@ import { LoginComponent } from './Login/login.component';
 import { ForgotComponent } from './Login/forgot.component';
 import { ResetComponent } from './Login/reset.component';
 import { SuccessComponent } from './Login/success.component';
-import { ForgotSuccessComponent } from './Login/fgSuccess.component';
-import { ForgotFailComponent } from './Login/fgfail.component';
+import { ForgotSuccessComponent } from './Login/forgot-success.component';
+import { ForgotFailComponent } from './Login/forgot-fail.component';
 
 import { LivechatComponent } from './Livechat/livechat.component';
 
@@ -25,6 +25,53 @@ import { UserdetailsComponent } from './Livechat/userdetails.component';
 import { SidebarComponent } from './Menu/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CannedComponent } from './Forms/canned.component';
+import { ForwardComponent } from './Forms/forward.component';
+
+import { RouterModule, Routes } from '@angular/router';
+
+import { CloseComponent } from './Forms/close.component';
+
+
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+import { TicketComponent } from './Tickets/ticket.component';
+
+const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'forgot',
+    component: ForgotComponent
+  },
+
+  {
+    path:'canned',
+    component: CannedComponent
+  },
+
+  {
+    path: 'userdetails',
+    component: UserdetailsComponent
+  },
+
+{
+  path: 'forward',
+  component: ForwardComponent
+}
+ 
+
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,11 +82,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SuccessComponent,
     ForgotSuccessComponent,
     ForgotFailComponent,
-        /*  Login component ends here */
 
-            /*  Registration component starts here */
+    /*  Login component ends here */
+
+    /*  Registration component starts here */
     RegisterComponent,
-   
+
     /*  Registration component ends here */
     LivechatComponent,
 
@@ -48,22 +96,40 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     DashboardComponent,
     /*  Menu items end*/
-    
+
     /*livechat component registration */
     ChatboxComponent,
     SupportComponent,
     UserdetailsComponent,
     /* livechat ends here*/
 
+    TicketComponent,
+
+    /* forms starts here*/
+    CloseComponent,
+    CannedComponent,
+    ForwardComponent
+    /* forms ends here*/
+
   ],
   imports: [
     BrowserModule,
+    [RouterModule.forRoot(routes)],
+
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    NgbModule,
 
   ],
+
+  exports: [RouterModule],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
+

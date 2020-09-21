@@ -1,3 +1,5 @@
+/*
+
 #frame {
     width: 95%;
     min-width: 360px;
@@ -300,23 +302,24 @@
 }
 
 ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
+  
     color: #b0b7c3!important;
 }
+/*
 
 ::-moz-placeholder {
-    /* Firefox 19+ */
+  
     color: #b0b7c3!important;
 }
 
  :-ms-input-placeholder {
-    /* IE 10+ */
+  
     color: #b0b7c3!important;
     ;
 }
 
  :-moz-placeholder {
-    /* Firefox 18- */
+ 
     color: #b0b7c3!important;
 }
 
@@ -632,6 +635,10 @@
     float: left;
 }
 
+#frame .content .contact-profile .profile-icons {
+    float: right;
+}
+
 #frame .content .contact-profile .social-media {
     float: right;
 }
@@ -646,6 +653,7 @@
 }
 
 #frame .content .messages {
+    width: 100%;
     height: auto;
     min-height: calc(100% - 93px);
     max-height: calc(100% - 93px);
@@ -811,3 +819,5 @@
 #frame .content .message-input .wrap button:focus {
     outline: none;
 }
+
+*/

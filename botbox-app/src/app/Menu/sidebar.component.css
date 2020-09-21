@@ -1,0 +1,138 @@
+* {
+    font-family: Inter;
+}
+
+#wrapper {
+    overflow-x: hidden;
+    width: 18vw;
+}
+
+.list-group a {
+    background-color: #23374d;
+}
+
+@media screen and (max-width:700px) {
+    .lg1 span {
+        display: none;
+    }
+    .lg2 span {
+        display: none;
+    }
+}
+
+#sidebar-wrapper {
+    width: 90%;
+    background-color: #23374d;
+    min-height: 100vh;
+    /* margin-left: -25rem; */
+    -webkit-transition: margin .35s ease-out;
+    -moz-transition: margin .35s ease-out;
+    -o-transition: margin .35s ease-out;
+    transition: margin .35s ease-out;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 992px) {
+    #sidebar-wrapper {
+        width: 30%;
+    }
+    .lg1 span {
+        display: none;
+    }
+    .lg2 span {
+        display: none;
+    }
+    .lg3 span {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #sidebar-wrapper {
+        margin-left: 0rem;
+    }
+}
+
+hr {
+    background-color: #ffffff;
+    opacity: 0.1;
+}
+
+#sidebar-wrapper .list-group-item {
+    font-family: Inter;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+#sidebar-wrapper .list-group a:hover {
+    background-color: #355374;
+}
+
+a .li-icon {
+    float: right;
+}
+
+a .li-iconL {
+    float: left;
+}
+
+.border-right a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 2%;
+}
+
+.list-group-item {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 2%;
+    border: none!important;
+}
+
+.lg2 {
+    border: none!important;
+    font-family: Inter;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    ;
+}
+
+.lg1 .list-group-item svg {
+    margin-right: 12%;
+    margin-left: 2%;
+}
+
+.lg2 .list-group-item img {
+    margin-right: 4%;
+    margin-left: 8%;
+}
+
+.lg3 .list-group-item img {
+    margin-right: 4%;
+    margin-left: 8%;
+}
+
+.list-group .list-group-item img {
+    height: 24px;
+    width: 24px;
+}
