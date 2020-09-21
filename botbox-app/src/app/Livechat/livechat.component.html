@@ -166,19 +166,33 @@
             <div class="wrap">
                 <input type="text" placeholder="Message">
 
+                <div class="dropdown">
+                    <input type="text" class="inputText-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required />
 
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="teammates">Teammates</p>
+                        <a class="dropdown-item" href="#">
+                            <div class="wrap">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6y5kan7ydWfYYcZzx1qy2bZQst8Q5Wie12Q&usqp=CAU" alt="" />
+                                <div class="user-item">
+                                    <p class="user-name">Richard Hendricks</p>
+                                    <p class="chat-details"> 0 Chats - Marketing</p>
+                                </div>
+
+                            </div>
+                        </a>
+
+
+
+
+                    </div>
+                </div>
                 <svg class="canned-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#355374" fill-rule="evenodd"
                         d="M12.614 21h2.045l.767-4.67h2.514l.333-2.046h-2.514l.664-4.023h2.532l.332-2.045h-2.531l.767-4.67h-2.046l-.767 4.67h-4.09l.766-4.67H9.341l-.767 4.67H6.06l-.333 2.045h2.514l-.664 4.023H5.045l-.332 2.046h2.531L6.477 21h2.046l.767-4.67h4.09L12.615 21zm-2.992-6.716l.665-4.023h4.09l-.664 4.023h-4.09z" />
                 </svg>
 
-                <script>
-                    document.getElementById('attach-item').addEventListener('click', openDialog);
 
-                    function openDialog() {
-                        document.getElementById('attach-item').click();
-                    }
-                </script>
                 <svg class="attach-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#355374" fill-rule="evenodd"
                         d="M17.484 16.969c-.03 1.562-.562 2.86-1.593 3.89-1.032 1.032-2.328 1.563-3.891 1.594-1.563-.031-2.86-.562-3.89-1.594-1.032-1.03-1.579-2.328-1.641-3.89v-10.5C6.5 5.344 6.89 4.406 7.64 3.656s1.695-1.125 2.836-1.125c1.14 0 2.085.375 2.835 1.125s1.141 1.688 1.172 2.813v8.484c-.03.719-.28 1.313-.75 1.781-.468.47-1.054.703-1.757.703-.704 0-1.29-.234-1.758-.703-.469-.468-.719-1.062-.75-1.78v-7.5h1.5v7.5c.031.28.14.515.328.702.187.188.422.281.703.281.281 0 .516-.093.703-.28.188-.188.281-.423.281-.704V6.47c-.03-.719-.28-1.313-.75-1.782-.468-.468-1.054-.703-1.757-.703-.704 0-1.29.235-1.758.703-.469.47-.719 1.063-.75 1.782v10.5C8 18.094 8.39 19.03 9.14 19.78s1.695 1.125 2.836 1.125c1.14 0 2.085-.375 2.835-1.125s1.141-1.687 1.172-2.812V7.453h1.5v9.516z" />
