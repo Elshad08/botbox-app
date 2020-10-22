@@ -13,6 +13,7 @@ export class LivechatComponent {
 
     };
 
+    isHidden = false;
     isShow = false;
     supportBot = false;
 
@@ -20,10 +21,10 @@ export class LivechatComponent {
   
     supportToggle() {
       this.supportBot = !this.supportBot;
-  
+
     }
   
-  
+
     toggleDisplay() {
       this.isShow = !this.isShow;
     }
@@ -32,6 +33,8 @@ export class LivechatComponent {
       this.isCanned =! this.isCanned;
     }
   
- 
+    toggleDetail() {
+      this.isHidden =! this.isHidden;
+    }
 
 }

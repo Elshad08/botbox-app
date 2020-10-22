@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "app-test-50789"
+  },
+  "targets": {
+    "app-test-50789": {
+      "hosting": {
+        "botbox-app": [
+          "app-test-50789"
+        ]
+      }
+    },
+    "botbox-app": {
+      "hosting": {
+        "botbox-app": [
+          "botbox-app"
+        ]
+      }
+    }
+  }
+}

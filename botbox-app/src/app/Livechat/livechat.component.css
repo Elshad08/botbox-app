@@ -236,7 +236,7 @@ html::-webkit-scrollbar {
 
 .frame-support {
     width: 100%!important;
-    max-width: 22vw!important;
+    max-width: 25vw!important;
     height: 100vh;
     min-height: 300px;
     max-height: 720px;
@@ -798,6 +798,7 @@ html::-webkit-scrollbar {
     line-height: 1.71;
     letter-spacing: normal;
     color: #4e5d78;
+    max-width: calc(100% - 30px);
 }
 
 #frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
@@ -888,6 +889,13 @@ html::-webkit-scrollbar {
 #frame .content .contact-profile .profile-icons {
     float: right;
     display: -webkit-inline-box;
+    margin-right: 1%;
+}
+
+@media screen and (max-width: 1024px) {
+    #frame .content .contact-profile .profile-icons {
+        display: none;
+    }
 }
 
 #frame .content .contact-profile .profile-icons .forward-item {
@@ -966,6 +974,8 @@ html::-webkit-scrollbar {
     margin-top: 30px;
 }
 
+@media only screen and (min-width: 1024px) {}
+
 #frame .content .messages .canned-response .save-item .save-as {
     width: 176px;
     height: 28px;
@@ -980,6 +990,12 @@ html::-webkit-scrollbar {
     text-align: center;
     color: #ffffff;
     float: left;
+}
+
+@media only screen and (max-width: 1440px) {
+    #frame .content .messages .canned-response .save-item .save-as span {
+        width: 160px;
+    }
 }
 
 #frame .content .messages .canned-response .save-item .save-as .saved {
@@ -1117,7 +1133,7 @@ html::-webkit-scrollbar {
     text-align: right;
     color: #8a94a6;
     float: right;
-    margin-right: 40px;
+    margin-right: 64px;
 }
 
 #frame .content .messages ul li.replies .readable svg {
@@ -1126,18 +1142,19 @@ html::-webkit-scrollbar {
 }
 
 #frame .content .messages ul li.replies .readable {
-    margin-top: -5px;
+    margin-top: -8px;
 }
 
 #frame .content .messages ul li img {
-    width: 22px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     float: left;
 }
 
 #frame .content .messages ul li p {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 15px 15px;
     border-radius: 20px;
     max-width: 205px;
     line-height: 130%;

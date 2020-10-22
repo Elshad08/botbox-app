@@ -1,0 +1,91 @@
+<router-outlet>
+</router-outlet>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea class="form-control" id="content" required ngModel name="message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="!postForm.valid">
+                    Send Post
+                </button>
+            </form>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <button class="btn btn-primary" (click)="onFetchPosts()">
+                Fetch Posts
+            </button> |
+
+        </div>
+    </div>
+</div>
+
+<table class="table" id='tab'>
+    <thead>
+        <tr>
+
+            <th scope="col">ID</th>
+            <th scope="col">SupportName</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Created</th>
+            <th scope="col">SID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of appList">
+
+            <td>{{ p.ID }} </td>
+            <td>{{ p.SupportName }} </td>
+            <td>{{ p.UserName }} </td>
+            <td>{{ p.Created }} </td>
+            <td>{{ p.SID }} </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- <table class="table" id='tab'>
+    <thead>
+        <tr>
+
+            <th scope="col">SubType</th>
+            <th scope="col">Text</th>
+            <th scope="col">Command</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="observable$ | async as ob">
+        <tr *ngFor="let e of ob">
+
+            <td>{{ e.Type }} </td>
+            <td>{{ e.Text }} </td>
+            <td>{{ e.Command }} </td>
+            <td>{{ e.agentMessage }} </td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+
+
+
+
+
+
+
+<!-- <h3>
+    <a [routerLink]="'/livechat'"> Click to open Livechat</a>
+</h3>
+
+
+<a [routerLink]="'/profile'" ngbTooltip="Canned Response" [openDelay]="300" [closeDelay]="500">Click to open profile</a>
+ -->

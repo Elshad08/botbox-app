@@ -1,0 +1,152 @@
+* {
+    font-family: Inter;
+    padding-left: 0;
+}
+
+body {
+    background: #F1F3FA;
+}
+
+
+/* Profile container */
+
+
+/* Profile sidebar */
+
+.profile {
+    border: 1px solid #f7f8f9;
+    margin-left: 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-sidebar .details {
+    margin-left: 8.6%;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 4.5%;
+}
+
+.profile-usermenu .list-group .list-group-item {
+    padding: 0;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #1e2f42;
+    border: none;
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+    background-color: #f7f8f9;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.profile-usermenu .list-group .list-group-item svg {
+    float: right;
+}
+
+.profile-usermenu .list-group {
+    margin-left: 24px;
+}
+
+.profile-usertitle-name {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4e5d78;
+}
+
+.profile-usertitle-job {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8a94a6;
+    margin-bottom: 5%;
+}
+
+.profile-userbuttons svg {
+    background-color: #f1f2f4;
+    border-radius: 160px;
+    width: 12%;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 7%;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+
+/* Profile Content */
+
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+.user-button {
+    margin-right: 16px;
+    margin-left: 16px;
+}

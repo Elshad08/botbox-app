@@ -1,0 +1,417 @@
+* {
+    font-family: Inter;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0;
+}
+
+input {
+    outline: none;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.btn {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+#tickets {
+    background-color: #f7f8f9;
+}
+
+#tickets .header-items {
+    padding: 5px 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#tickets .header-items .active-tickets {
+    font-family: Inter;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+#tickets .header-items .sort {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #8a94a6;
+    margin-left: 4%;
+    margin-right: 1%;
+    vertical-align: super;
+}
+
+#tickets .header-items .created {
+    vertical-align: super;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #1e2f42;
+    margin-right: 5px;
+}
+
+#tickets .header-items .toDrop {
+    vertical-align: initial;
+}
+
+#tickets .header-items .btns svg {
+    vertical-align: sub;
+}
+
+#tickets .header-items .btns {
+    float: right;
+}
+
+#tickets .header-items .btns .export {
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    margin-right: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+#tickets .header-items .btns .create-new {
+    outline: none!important;
+    border-radius: 4px;
+    background-color: #1089ff;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+#tickets .header-items .btns .btn {
+    height: 48px;
+    width: 160px;
+}
+
+#tickets .in-search input {
+    height: 56px;
+}
+
+#tickets .in-search .col-long input {
+    padding-left: 11%;
+}
+
+#tickets .in-search .col-mid input {
+    padding-left: 6%;
+}
+
+#tickets .in-search .col-mid .collapsiable {
+    position: absolute;
+    top: 30%;
+    right: 6%;
+}
+
+#tickets .in-search {
+    padding: 24px 24px 24px 24px;
+}
+
+.input-group .btn-block svg {
+    float: left;
+}
+
+#tickets .in-search .input-group .btn {
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    border: solid 1px #1089ff;
+    background-color: #ffffff;
+    color: #0076e8;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+#tickets .in-ticket {
+    margin-bottom: 5px;
+    padding: 3% 0 3%;
+    border-radius: 8px;
+}
+
+#tickets .row {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+#tickets .user-profile img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    border-radius: 160px;
+    box-shadow: 0 3px 13px -1px rgba(10, 22, 70, 0.1), 0 0 1px 0 rgba(10, 22, 70, 0.06);
+    background-color: #ffffff;
+    position: absolute;
+    left: 22.5%;
+    top: 0;
+}
+
+#tickets .user-profile .row input {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+}
+
+
+/* .user-profile .profile-info svg {
+    float: right;
+} */
+
+.order-details .color-type {
+    height: 15px;
+    width: 15px;
+    float: left;
+    border-radius: 2px;
+}
+
+.order-details .normal-type {
+    background-color: #1089ff;
+}
+
+.order-details .low-type {
+    background-color: #a7aebb;
+}
+
+.order-details .urgent-type {
+    background-color: #e80f54;
+}
+
+.order-details {
+    margin-left: 19px;
+}
+
+.user-profile .profile-info {
+    float: right;
+    margin-right: 50px;
+}
+
+.user-profile .profile-info .btn {
+    outline: none;
+    border-radius: 4px;
+    background-color: #e8f4ff;
+    border: none;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0076e8;
+    margin-top: 12px;
+}
+
+
+/* default css for specific elements goes here */
+
+.main-text {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.sub-text {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+    margin-top: 3%;
+}
+
+.ordinary {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.order-time {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #0076e8;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #b0b7c3;
+}
+
+.detailed {
+    margin-bottom: 24px;
+}
+
+.user-profile .unchecked {
+    position: absolute;
+    top: 26px;
+    left: 29px;
+}
+
+.in-search .input-group .form-controller {
+    width: 100%;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+}
+
+.in-search .input-group .search-item {
+    position: absolute;
+    bottom: 18px;
+    left: 12px;
+}
+
+.col-long {
+    width: 37%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.col-mid {
+    width: 19.4%;
+    margin-right: 1%;
+}
+
+.col-btn {
+    width: 20%;
+}
+
+.col-equal {
+    width: 32%;
+}
+
+.col-first {
+    margin-left: 1%;
+}
+
+#tickets .in-search .col-first input {
+    padding-left: 12%;
+}
+
+#tickets .in-search .col-second input {
+    padding-left: 3.7%;
+}
+
+#tickets .in-search .col-equal .label-icon {
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+#tickets .acmd-btn .acmd {
+    width: 100%;
+    float: right;
+}
+
+#tickets .acmd-btn .acmd .btn-assign {
+    width: 16%;
+}
+
+#tickets .acmd-btn .acmd .btn-merge {
+    width: 15%;
+    margin-left: 2.1%;
+}
+
+#tickets .acmd-btn .acmd .btn-complete {
+    width: 18%;
+    margin-left: 2.1%;
+}
+
+#tickets .acmd-btn .acmd .btn-delete {
+    width: 15%;
+    margin-left: 2.1%;
+}
+
+#tickets .acmd-btn .acmd .btn {
+    float: right;
+    height: 48px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+}
+
+#tickets .acmd-btn .acmd span {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2f42;
+}
+
+#tickets .acmd-btn .btn svg {
+    float: right;
+    margin-right: 16px;
+}
+
+.divisor {
+    float: right;
+    background-color: #e1e4e8;
+    width: 1px;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    right: 11px;
+}

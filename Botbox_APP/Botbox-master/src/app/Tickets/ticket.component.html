@@ -1,0 +1,875 @@
+<div class="container-fluid no-pad">
+    <div class="row ">
+        <div class="col-xl-2 col-lg-2 no-pad">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-xl-10 col-lg-10 first" style="padding-left:0px">
+            <app-navbar style="z-index:2"></app-navbar>
+            <div class="row">
+
+                <div class="col-lg-12 col-xl-12 col-md-12 no-pad">
+                    <div id="tickets">
+                        <div class="container mb-2">
+                            <div class="header-items">
+
+                                <span class="active-tickets">Active tickets</span>
+                                <span class="sort">Sort by:</span>
+                                <span class="created">Date created</span>
+                                <svg class="toDrop" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <path fill="#8A94A6" fill-rule="evenodd"
+                                        d="M6.172 7.148L10 10.977 13.828 7.148 15 8.32 10 13.32 5 8.32z" />
+                                </svg>
+
+                                <div class="btns">
+                                    <button class="btn btn-lg export">Export tickets
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20">
+                                            <path fill="#1E2F42" fill-rule="evenodd"
+                                                d="M16.602 10.078L10 16.68l-6.602-6.602L4.57 8.906l4.61 4.57V1.68h1.64v11.797l4.61-4.61 1.172 1.211zm1.718 6.602v1.64H1.68v-1.64h16.64z" />
+                                        </svg>
+
+                                    </button>
+                                    <button class="btn btn-lg create-new">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="#FFF" fill-rule="evenodd"
+                                                d="M18.984 12.984L12.984 12.984 12.984 18.984 11.016 18.984 11.016 12.984 5.016 12.984 5.016 11.016 11.016 11.016 11.016 5.016 12.984 5.016 12.984 11.016 18.984 11.016z" />
+                                        </svg>
+
+                                        Create new
+
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="row in-search">
+                                <div class="col-long">
+
+                                    <div class="input-group">
+
+                                        <label for="">
+                                            <svg class="search-item" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                height="20" viewBox="0 0 20 20">
+                                                <path fill="#C9CED6" fill-rule="evenodd"
+                                                    d="M9.167 13.333c2.3 0 4.166-1.865 4.166-4.166C13.333 6.865 11.468 5 9.167 5 6.865 5 5 6.865 5 9.167c0 2.3 1.865 4.166 4.167 4.166zm0-10C12.388 3.333 15 5.945 15 9.167c0 1.31-.432 2.52-1.162 3.494l2.585 2.583c.325.326.325.853 0 1.179-.326.325-.853.325-1.179 0l-2.583-2.585c-.974.73-2.184 1.162-3.494 1.162-3.222 0-5.834-2.612-5.834-5.833 0-3.222 2.612-5.834 5.834-5.834z" />
+                                            </svg>
+
+
+                                        </label>
+                                        <input type="text" class="form-controller search-bar" placeholder="Search for type, customer and etc." />
+
+
+                                    </div>
+                                </div>
+                                <div class="col-mid">
+                                    <div class="input-group">
+                                        <label for="">
+                                            <svg class="collapsiable" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path d="M6.984 9.984L17.016 9.984 12 15z"
+                                                                    transform="translate(-1614 -140) translate(1040) translate(574 140)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+
+
+                                        </label>
+                                        <input type="text" class="form-controller" placeholder="Category">
+                                    </div>
+                                </div>
+                                <div class="col-mid">
+                                    <div class="input-group">
+                                        <label for="">
+                                            <svg class="collapsiable" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path d="M6.984 9.984L17.016 9.984 12 15z"
+                                                                    transform="translate(-1614 -140) translate(1040) translate(574 140)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+
+
+                                        </label>
+                                        <input type="text" class="form-controller" placeholder="Status">
+
+                                    </div>
+                                </div>
+                                <div class="col-btn">
+                                    <div class="input-group">
+                                        <button (click)=detailedSearch() class="btn ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="#0076E8" fill-rule="evenodd"
+                                                    d="M16.594 5.578L18 6.984l-6 6-6-6 1.406-1.406L12 10.172l4.594-4.594zm0 6L18 12.984l-6 6-6-6 1.406-1.406L12 16.172l4.594-4.594z" />
+                                            </svg>
+                                            <span>
+                                                Detailed search
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row in-search detailed" [hidden]="isDetailed">
+                                <div class="col-equal col-first mr-4">
+                                    <div class="input-group">
+                                        <label for="">
+                                            <svg class="search-item" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                height="20" viewBox="0 0 20 20">
+                                                <path fill="#C9CED6" fill-rule="evenodd"
+                                                    d="M9.167 13.333c2.3 0 4.166-1.865 4.166-4.166C13.333 6.865 11.468 5 9.167 5 6.865 5 5 6.865 5 9.167c0 2.3 1.865 4.166 4.167 4.166zm0-10C12.388 3.333 15 5.945 15 9.167c0 1.31-.432 2.52-1.162 3.494l2.585 2.583c.325.326.325.853 0 1.179-.326.325-.853.325-1.179 0l-2.583-2.585c-.974.73-2.184 1.162-3.494 1.162-3.222 0-5.834-2.612-5.834-5.833 0-3.222 2.612-5.834 5.834-5.834z" />
+                                            </svg>
+
+
+                                        </label>
+                                        <input type="text" class="form-controller" placeholder="Agent or group">
+                                    </div>
+                                </div>
+                                <div class="col-equal col-second">
+                                    <div class="input-group">
+                                        <label for="">
+                                            <svg class="label-icon" (click)="d.toggle()"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#0076E8">
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M18.984 18.984H5.016V8.016h13.968v10.968zm-3-18H18V3h.984c.563 0 1.04.187 1.43.563.39.375.586.859.586 1.453v13.968c0 .563-.195 1.04-.586 1.43-.39.39-.867.586-1.43.586H5.016c-.563 0-1.04-.195-1.43-.586-.39-.39-.586-.867-.586-1.43V5.016c0-.594.187-1.078.563-1.454C3.938 3.188 4.421 3 5.016 3H6V.984h2.016V3h7.968V.984z"
+                                                                    transform="translate(-1110 -368) translate(798 352) translate(312 16)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+
+
+                                        </label>
+                                        <input type="text" ngbDatepicker #d="ngbDatepicker" class="form-controller" placeholder="Date arrange">
+
+                                    </div>
+                                </div>
+                                <div class="col-equal col-second ml-4">
+                                    <div class="input-group">
+                                        <label for="">
+                                            <svg class="label-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path d="M6.984 9.984L17.016 9.984 12 15z"
+                                                                    transform="translate(-1614 -140) translate(1040) translate(574 140)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </label>
+                                        <input type="text" class="form-controller" placeholder="Priority">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row in-search acmd-btn" [hidden]="isSelected">
+                                <div class="col-lg-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#1089FF">
+                                                <g>
+                                                    <path
+                                                        d="M18.154 2c1.337 0 1.822.14 2.311.4.49.262.873.646 1.134 1.135.262.489.401.974.401 2.31v12.31c0 1.336-.14 1.821-.4 2.31-.262.49-.646.873-1.135 1.134-.489.262-.974.401-2.31.401H5.844c-1.336 0-1.821-.14-2.31-.4-.49-.262-.873-.646-1.134-1.135-.262-.489-.401-.974-.401-2.31V5.844c0-1.336.14-1.821.4-2.31.262-.49.646-.873 1.135-1.134.489-.262.974-.401 2.31-.401h12.31zM16 11H8c-.552 0-1 .448-1 1s.448 1 1 1h8c.552 0 1-.448 1-1s-.448-1-1-1z"
+                                                        transform="translate(-432 -348) translate(432 348)" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>
+                                        SELECT ALL
+                                    </span>
+                                </div>
+
+
+                                <div class="col-lg-9">
+                                    <div class="acmd">
+                                        <button class="btn btn-delete">
+                                            <span>
+                                                Delete
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M5 15.82c0 .47.163.866.488 1.192.326.325.723.488 1.192.488h6.64c.47 0 .866-.163 1.192-.488.325-.326.488-.723.488-1.192v-10H5v10zM6.68 7.5h6.64v8.32H6.68V7.5zm6.25-4.18h2.89V5H4.18V3.32h2.89l.86-.82h4.14l.86.82z"
+                                                                    transform="translate(-1476 -350) translate(1396 336) translate(80 14)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </button>
+
+                                        <button class="btn btn-merge">
+                                            <span>
+                                                Merge
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M14.18 16.992l1.172-1.172-2.852-2.812-1.172 1.172 2.852 2.812zM6.25 6.68L10 2.93l3.75 3.75h-2.93v5.312l-5 5-1.172-1.172 4.532-4.492V6.68H6.25z"
+                                                                    transform="translate(-1344 -350) translate(1264 336) translate(80 14)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </button>
+                                        <button class="btn btn-complete">
+                                            <span>
+                                                Complete
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M16.68 10c-.052 1.901-.703 3.477-1.953 4.727-1.25 1.25-2.826 1.9-4.727 1.953-1.901-.052-3.477-.703-4.727-1.953-1.25-1.25-1.9-2.826-1.953-4.727.052-1.901.703-3.477 1.953-4.727C6.523 4.023 8.1 3.373 10 3.32c.625 0 1.237.091 1.836.274l1.289-1.328C12.161 1.875 11.12 1.68 10 1.68c-2.37.052-4.336.86-5.898 2.422C2.539 5.664 1.732 7.63 1.68 10c.052 2.37.86 4.336 2.422 5.898C5.664 17.461 7.63 18.268 10 18.32c2.37-.052 4.336-.86 5.898-2.422 1.563-1.562 2.37-3.528 2.422-5.898h-1.64zM6.602 8.398l2.578 2.579 7.148-7.149L17.5 5l-8.32 8.32-3.75-3.75 1.172-1.172z"
+                                                                    transform="translate(-1212 -350) translate(1108 336) translate(104 14)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </button>
+                                        <button class="btn btn-assign">
+
+
+                                            <span>
+                                                Assign
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g fill="#1E2F42">
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M12.5 3.32c-.938.026-1.719.352-2.344.977-.625.625-.937 1.413-.937 2.363s.312 1.738.937 2.363 1.406.938 2.344.938 1.719-.313 2.344-.938c.625-.625.937-1.412.937-2.363 0-.95-.312-1.738-.937-2.363s-1.406-.95-2.344-.977zm0 1.602c.495 0 .905.17 1.23.508.326.338.489.755.489 1.25 0 .494-.163.905-.489 1.23-.325.326-.735.488-1.23.488s-.905-.162-1.23-.488c-.326-.325-.489-.736-.489-1.23 0-.495.163-.912.489-1.25.325-.339.735-.508 1.23-.508zm-9.18.898v2.5H.82V10h2.5v2.5H5V10h2.5V8.32H5v-2.5H3.32zm9.18 5c-1.25 0-2.637.28-4.16.84-1.524.56-2.363 1.4-2.52 2.52v2.5h13.36v-2.5c-.157-1.12-.996-1.96-2.52-2.52-1.523-.56-2.91-.84-4.16-.84zm0 1.602c1.302.026 2.46.247 3.477.664 1.015.417 1.549.781 1.601 1.094v.898H7.422v-.898c.052-.313.586-.677 1.601-1.094 1.016-.417 2.175-.638 3.477-.664z"
+                                                                    transform="translate(-1056 -350) translate(968 336) translate(88 14)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row in-ticket">
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="user-profile">
+                                        <input (click)="selectedTicket()" class="unchecked form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class=" form-check-label" for="defaultCheck1">
+                                            
+                                        </label>
+
+
+                                        <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-594328,resizemode-1,msid-69381991/tech/internet/in-webs-dark-corner-your-profile-is-on-sale-for-just-a-few-bucks/hacker-1.jpg" alt="" />
+
+
+                                        <div class="profile-info">
+
+
+
+                                            <span class="main-text mr-3">Jeremías del Pozo</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#A7AEBB" fill-rule="evenodd"
+                                                    d="M13.344 1.344c.375 0 .687.125.937.375s.375.562.375.937v8c0 .375-.125.693-.375.953s-.562.391-.937.391H4l-2.656 2.656v-12c0-.375.125-.687.375-.937s.562-.375.937-.375h10.688z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">Messenger - 055 671 1781</p>
+                                            <button class="btn btn-info btn-lg">#0032</button>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-2">
+
+                                    <div class="row">
+                                        <div class="order-info">
+
+                                            <span class="main-text mr-3">Orders and requests</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#0DA8C7" fill-rule="evenodd"
+                                                    d="M7.344 6h1.312V4.656H7.344V6zM8 13.344c-1.5-.042-2.755-.568-3.766-1.578C3.224 10.756 2.698 9.5 2.656 8c.042-1.5.568-2.755 1.578-3.766C5.244 3.224 6.5 2.698 8 2.656c1.5.042 2.755.568 3.766 1.578C12.776 5.244 13.302 6.5 13.344 8c-.042 1.5-.568 2.755-1.578 3.766-1.01 1.01-2.266 1.536-3.766 1.578zm0-12c-1.896.041-3.469.687-4.719 1.937C2.031 4.531 1.385 6.104 1.344 8c.041 1.896.687 3.469 1.937 4.719 1.25 1.25 2.823 1.896 4.719 1.937 1.896-.041 3.469-.687 4.719-1.937 1.25-1.25 1.896-2.823 1.937-4.719-.041-1.896-.687-3.469-1.937-4.719C11.469 2.031 9.896 1.385 8 1.344zm-.656 10v-4h1.312v4H7.344z" />
+                                            </svg>
+
+
+
+                                            <p class="text-muted sub-text">Created 6 minutes ago</p>
+                                            <span class="sub-text">Due in </span>
+                                            <span class="order-time">00:02:03</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-4">
+                                    <div class="row">
+                                        <div class="pickup">
+
+                                            <span class="main-text mr-3">Pick up in </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#0076E8" fill-rule="evenodd"
+                                                    d="M5.016 11.016l1.5-4.5h10.968l1.5 4.5H5.016zm12.468 4.968c-.406 0-.75-.14-1.03-.421-.282-.282-.423-.633-.423-1.055 0-.422.14-.774.422-1.055.281-.281.633-.422 1.055-.422.422 0 .773.14 1.055.422.28.281.421.633.421 1.055 0 .422-.14.773-.422 1.055-.28.28-.64.421-1.078.421zm-10.968 0c-.438 0-.797-.14-1.079-.421-.28-.282-.421-.633-.421-1.055 0-.422.14-.774.421-1.055.282-.281.633-.422 1.055-.422.422 0 .774.14 1.055.422.281.281.422.633.422 1.055 0 .422-.14.773-.422 1.055-.281.28-.625.421-1.031.421zM18.937 6L21 12v8.016c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281h-1.032c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703v-1.032H6v1.032c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281H3.984c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703V12l2.063-6c.125-.281.312-.516.562-.703.25-.188.547-.281.89-.281h10.97c.343 0 .64.093.89.28.25.188.437.423.563.704z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">2 minutes</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="divisor"></div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="row">
+                                        <div class="order-details">
+                                            <li>
+                                                <span class="color-type normal-type"></span>
+                                                <span class="order-type main-text ml-3 mr-3">Normal</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <path fill="#8A94A6" fill-rule="evenodd"
+                                                        d="M6.172 7.148L10 10.977 13.828 7.148 15 8.32 10 13.32 5 8.32z" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M10 10.82c-1.25 0-2.637.28-4.16.84-1.524.56-2.363 1.4-2.52 2.52v2.5h13.36v-2.5c-.157-1.12-.996-1.96-2.52-2.52-1.523-.56-2.91-.84-4.16-.84zm0-7.5c-.938.026-1.719.352-2.344.977-.625.625-.937 1.413-.937 2.363s.312 1.738.937 2.363 1.406.938 2.344.938 1.719-.313 2.344-.938c.625-.625.937-1.412.937-2.363 0-.95-.312-1.738-.937-2.363S10.938 3.347 10 3.32zm0 9.102c1.302.026 2.46.247 3.477.664 1.015.417 1.549.781 1.601 1.094v.898H4.922v-.898c.052-.313.586-.677 1.601-1.094 1.016-.417 2.175-.638 3.477-.664zm0-7.5c.495 0 .905.17 1.23.508.326.338.489.755.489 1.25 0 .494-.163.905-.489 1.23-.325.326-.735.488-1.23.488s-.905-.162-1.23-.488c-.326-.325-.489-.736-.489-1.23 0-.495.163-.912.489-1.25.325-.339.735-.508 1.23-.508z"
+                                                                                    transform="translate(-1276 -518) translate(408 456) translate(868 28) translate(0 34)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Sales / Muhammad Oruc</span>
+                                            </li>
+                                            <li>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M2.93 15.43L1.68 14.18 7.93 7.93 11.25 11.25 17.148 4.57 18.32 5.781 11.25 13.75 7.93 10.43z"
+                                                                                    transform="translate(-1276 -550) translate(408 456) translate(868 28) translate(0 66)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Waiting on third party</span>
+                                            </li>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="row in-ticket">
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="user-profile">
+
+                                        <svg (click)="selectedTicket()" class="unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g fill="#C9CED6">
+                                                    <g>
+                                                        <g>
+                                                            <path
+                                                                d="M5.846 4c-.917 0-1.142.043-1.368.164-.14.075-.239.174-.314.314-.12.226-.164.45-.164 1.368v12.308c0 .917.043 1.142.164 1.368.075.14.174.239.314.314.226.12.45.164 1.368.164h12.308c.917 0 1.142-.043 1.368-.164.14-.075.239-.174.314-.314.12-.226.164-.45.164-1.368V5.846c0-.917-.043-1.142-.164-1.368-.075-.14-.174-.239-.314-.314-.226-.12-.45-.164-1.368-.164H5.846zm0-2h12.308c1.337 0 1.822.14 2.311.4.49.262.873.646 1.134 1.135.262.489.401.974.401 2.31v12.31c0 1.336-.14 1.821-.4 2.31-.262.49-.646.873-1.135 1.134-.489.262-.974.401-2.31.401H5.844c-1.336 0-1.821-.14-2.31-.4-.49-.262-.873-.646-1.134-1.135-.262-.489-.401-.974-.401-2.31V5.844c0-1.336.14-1.821.4-2.31.262-.49.646-.873 1.135-1.134.489-.262.974-.401 2.31-.401z"
+                                                                transform="translate(-432 -512) translate(408 456) translate(24 56)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+                                        <img src="data:image/jpeg;base64,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"
+                                            alt="" />
+
+
+                                        <div class="profile-info">
+
+
+
+                                            <span class="main-text mr-3">Drake</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#A7AEBB" fill-rule="evenodd"
+                                                    d="M11.344 7L14 4.344v7.312L11.344 9v2.344c-.021.187-.094.343-.219.469-.125.125-.281.187-.469.187h-8c-.187 0-.343-.062-.469-.188-.125-.125-.187-.28-.187-.468V4.656c0-.187.062-.343.188-.468.125-.126.28-.188.468-.188h8c.188 0 .344.062.469.188.125.125.198.28.219.468V7z" />
+                                            </svg>
+
+                                            <p class="text-muted sub-text">Whatsapp - 050 234 4566</p>
+                                            <button class="btn btn-info btn-lg">#0032</button>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-2">
+
+                                    <div class="row">
+                                        <div class="order-info">
+
+                                            <span class="main-text mr-3">Incident</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#0DA8C7" fill-rule="evenodd"
+                                                    d="M7.344 6h1.312V4.656H7.344V6zM8 13.344c-1.5-.042-2.755-.568-3.766-1.578C3.224 10.756 2.698 9.5 2.656 8c.042-1.5.568-2.755 1.578-3.766C5.244 3.224 6.5 2.698 8 2.656c1.5.042 2.755.568 3.766 1.578C12.776 5.244 13.302 6.5 13.344 8c-.042 1.5-.568 2.755-1.578 3.766-1.01 1.01-2.266 1.536-3.766 1.578zm0-12c-1.896.041-3.469.687-4.719 1.937C2.031 4.531 1.385 6.104 1.344 8c.041 1.896.687 3.469 1.937 4.719 1.25 1.25 2.823 1.896 4.719 1.937 1.896-.041 3.469-.687 4.719-1.937 1.25-1.25 1.896-2.823 1.937-4.719-.041-1.896-.687-3.469-1.937-4.719C11.469 2.031 9.896 1.385 8 1.344zm-.656 10v-4h1.312v4H7.344z" />
+                                            </svg>
+
+
+
+                                            <p class="text-muted sub-text">Created 25 Jul, 2020</p>
+                                            <span class="sub-text">Pending for a few seconds </span>
+                                            <span class="order-time"></span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-4">
+                                    <!-- <div class="row">
+                                        <div class="pickup">
+
+                                            <span class="main-text mr-3">Pick up in </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#0076E8" fill-rule="evenodd"
+                                                    d="M5.016 11.016l1.5-4.5h10.968l1.5 4.5H5.016zm12.468 4.968c-.406 0-.75-.14-1.03-.421-.282-.282-.423-.633-.423-1.055 0-.422.14-.774.422-1.055.281-.281.633-.422 1.055-.422.422 0 .773.14 1.055.422.28.281.421.633.421 1.055 0 .422-.14.773-.422 1.055-.28.28-.64.421-1.078.421zm-10.968 0c-.438 0-.797-.14-1.079-.421-.28-.282-.421-.633-.421-1.055 0-.422.14-.774.421-1.055.282-.281.633-.422 1.055-.422.422 0 .774.14 1.055.422.281.281.422.633.422 1.055 0 .422-.14.773-.422 1.055-.281.28-.625.421-1.031.421zM18.937 6L21 12v8.016c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281h-1.032c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703v-1.032H6v1.032c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281H3.984c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703V12l2.063-6c.125-.281.312-.516.562-.703.25-.188.547-.281.89-.281h10.97c.343 0 .64.093.89.28.25.188.437.423.563.704z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">2 minutes</p>
+                                        </div>
+
+                                    </div> -->
+                                    <div class="divisor"></div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="row">
+                                        <div class="order-details">
+                                            <li>
+                                                <span class="color-type low-type"></span>
+                                                <span class="order-type main-text ml-3 mr-3">Low</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <path fill="#8A94A6" fill-rule="evenodd"
+                                                        d="M6.172 7.148L10 10.977 13.828 7.148 15 8.32 10 13.32 5 8.32z" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M10 10.82c-1.25 0-2.637.28-4.16.84-1.524.56-2.363 1.4-2.52 2.52v2.5h13.36v-2.5c-.157-1.12-.996-1.96-2.52-2.52-1.523-.56-2.91-.84-4.16-.84zm0-7.5c-.938.026-1.719.352-2.344.977-.625.625-.937 1.413-.937 2.363s.312 1.738.937 2.363 1.406.938 2.344.938 1.719-.313 2.344-.938c.625-.625.937-1.412.937-2.363 0-.95-.312-1.738-.937-2.363S10.938 3.347 10 3.32zm0 9.102c1.302.026 2.46.247 3.477.664 1.015.417 1.549.781 1.601 1.094v.898H4.922v-.898c.052-.313.586-.677 1.601-1.094 1.016-.417 2.175-.638 3.477-.664zm0-7.5c.495 0 .905.17 1.23.508.326.338.489.755.489 1.25 0 .494-.163.905-.489 1.23-.325.326-.735.488-1.23.488s-.905-.162-1.23-.488c-.326-.325-.489-.736-.489-1.23 0-.495.163-.912.489-1.25.325-.339.735-.508 1.23-.508z"
+                                                                                    transform="translate(-1276 -518) translate(408 456) translate(868 28) translate(0 34)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Marketing / ...</span>
+                                            </li>
+                                            <li>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M2.93 15.43L1.68 14.18 7.93 7.93 11.25 11.25 17.148 4.57 18.32 5.781 11.25 13.75 7.93 10.43z"
+                                                                                    transform="translate(-1276 -550) translate(408 456) translate(868 28) translate(0 66)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Waiting on third party</span>
+                                            </li>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="row in-ticket">
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="user-profile">
+
+                                        <svg (click)="selectedTicket()" class="unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g fill="#C9CED6">
+                                                    <g>
+                                                        <g>
+                                                            <path
+                                                                d="M5.846 4c-.917 0-1.142.043-1.368.164-.14.075-.239.174-.314.314-.12.226-.164.45-.164 1.368v12.308c0 .917.043 1.142.164 1.368.075.14.174.239.314.314.226.12.45.164 1.368.164h12.308c.917 0 1.142-.043 1.368-.164.14-.075.239-.174.314-.314.12-.226.164-.45.164-1.368V5.846c0-.917-.043-1.142-.164-1.368-.075-.14-.174-.239-.314-.314-.226-.12-.45-.164-1.368-.164H5.846zm0-2h12.308c1.337 0 1.822.14 2.311.4.49.262.873.646 1.134 1.135.262.489.401.974.401 2.31v12.31c0 1.336-.14 1.821-.4 2.31-.262.49-.646.873-1.135 1.134-.489.262-.974.401-2.31.401H5.844c-1.336 0-1.821-.14-2.31-.4-.49-.262-.873-.646-1.134-1.135-.262-.489-.401-.974-.401-2.31V5.844c0-1.336.14-1.821.4-2.31.262-.49.646-.873 1.135-1.134.489-.262.974-.401 2.31-.401z"
+                                                                transform="translate(-432 -512) translate(408 456) translate(24 56)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTs9tXMbP_7ycDz8FZQo2nVt5NHwamDJgednA&usqp=CAU" alt="" />
+
+
+                                        <div class="profile-info">
+
+
+
+                                            <span class="main-text mr-3">Marshall Bruce</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#A7AEBB" fill-rule="evenodd"
+                                                    d="M4.406 7.188c.5.958 1.12 1.807 1.86 2.546.74.74 1.588 1.36 2.546 1.86l1.47-1.469c.208-.188.437-.24.687-.156.75.25 1.541.375 2.375.375.187 0 .343.062.469.187.125.125.187.281.187.469v2.344c0 .187-.062.343-.188.469-.125.125-.28.187-.468.187-3.209-.083-5.88-1.193-8.016-3.328C3.193 8.536 2.083 5.865 2 2.656c0-.187.062-.343.188-.469.125-.125.28-.187.468-.187H5c.188 0 .344.062.469.188.125.125.187.28.187.468 0 .834.125 1.625.375 2.375.084.25.032.48-.156.688L4.406 7.187z" />
+                                            </svg>
+
+                                            <p class="text-muted sub-text">Telegram - 077 345 6722</p>
+                                            <button class="btn btn-info btn-lg">#0032</button>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-2">
+
+                                    <div class="row">
+                                        <div class="order-info">
+
+                                            <span class="main-text mr-3">Question</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#0DA8C7" fill-rule="evenodd"
+                                                    d="M7.344 6h1.312V4.656H7.344V6zM8 13.344c-1.5-.042-2.755-.568-3.766-1.578C3.224 10.756 2.698 9.5 2.656 8c.042-1.5.568-2.755 1.578-3.766C5.244 3.224 6.5 2.698 8 2.656c1.5.042 2.755.568 3.766 1.578C12.776 5.244 13.302 6.5 13.344 8c-.042 1.5-.568 2.755-1.578 3.766-1.01 1.01-2.266 1.536-3.766 1.578zm0-12c-1.896.041-3.469.687-4.719 1.937C2.031 4.531 1.385 6.104 1.344 8c.041 1.896.687 3.469 1.937 4.719 1.25 1.25 2.823 1.896 4.719 1.937 1.896-.041 3.469-.687 4.719-1.937 1.25-1.25 1.896-2.823 1.937-4.719-.041-1.896-.687-3.469-1.937-4.719C11.469 2.031 9.896 1.385 8 1.344zm-.656 10v-4h1.312v4H7.344z" />
+                                            </svg>
+
+
+
+                                            <p class="text-muted sub-text">Created 25 Jul, 2020</p>
+                                            <span class="sub-text">Pending for a few seconds</span>
+                                            <span class="order-time"></span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-4">
+                                    <!-- <div class="row">
+                                        <div class="pickup">
+
+                                            <span class="main-text mr-3">Pick up in </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#0076E8" fill-rule="evenodd"
+                                                    d="M5.016 11.016l1.5-4.5h10.968l1.5 4.5H5.016zm12.468 4.968c-.406 0-.75-.14-1.03-.421-.282-.282-.423-.633-.423-1.055 0-.422.14-.774.422-1.055.281-.281.633-.422 1.055-.422.422 0 .773.14 1.055.422.28.281.421.633.421 1.055 0 .422-.14.773-.422 1.055-.28.28-.64.421-1.078.421zm-10.968 0c-.438 0-.797-.14-1.079-.421-.28-.282-.421-.633-.421-1.055 0-.422.14-.774.421-1.055.282-.281.633-.422 1.055-.422.422 0 .774.14 1.055.422.281.281.422.633.422 1.055 0 .422-.14.773-.422 1.055-.281.28-.625.421-1.031.421zM18.937 6L21 12v8.016c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281h-1.032c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703v-1.032H6v1.032c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281H3.984c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703V12l2.063-6c.125-.281.312-.516.562-.703.25-.188.547-.281.89-.281h10.97c.343 0 .64.093.89.28.25.188.437.423.563.704z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">2 minutes</p>
+                                        </div>
+
+                                    </div> -->
+                                    <div class="divisor"></div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="row">
+                                        <div class="order-details">
+                                            <li>
+                                                <span class="color-type urgent-type"></span>
+                                                <span class="order-type main-text ml-3 mr-3">Urgent</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <path fill="#8A94A6" fill-rule="evenodd"
+                                                        d="M6.172 7.148L10 10.977 13.828 7.148 15 8.32 10 13.32 5 8.32z" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M10 10.82c-1.25 0-2.637.28-4.16.84-1.524.56-2.363 1.4-2.52 2.52v2.5h13.36v-2.5c-.157-1.12-.996-1.96-2.52-2.52-1.523-.56-2.91-.84-4.16-.84zm0-7.5c-.938.026-1.719.352-2.344.977-.625.625-.937 1.413-.937 2.363s.312 1.738.937 2.363 1.406.938 2.344.938 1.719-.313 2.344-.938c.625-.625.937-1.412.937-2.363 0-.95-.312-1.738-.937-2.363S10.938 3.347 10 3.32zm0 9.102c1.302.026 2.46.247 3.477.664 1.015.417 1.549.781 1.601 1.094v.898H4.922v-.898c.052-.313.586-.677 1.601-1.094 1.016-.417 2.175-.638 3.477-.664zm0-7.5c.495 0 .905.17 1.23.508.326.338.489.755.489 1.25 0 .494-.163.905-.489 1.23-.325.326-.735.488-1.23.488s-.905-.162-1.23-.488c-.326-.325-.489-.736-.489-1.23 0-.495.163-.912.489-1.25.325-.339.735-.508 1.23-.508z"
+                                                                                    transform="translate(-1276 -518) translate(408 456) translate(868 28) translate(0 34)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Development / ...</span>
+                                            </li>
+                                            <li>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M2.93 15.43L1.68 14.18 7.93 7.93 11.25 11.25 17.148 4.57 18.32 5.781 11.25 13.75 7.93 10.43z"
+                                                                                    transform="translate(-1276 -550) translate(408 456) translate(868 28) translate(0 66)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Waiting on third party</span>
+                                            </li>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="row in-ticket">
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="user-profile">
+
+                                        <svg (click)="selectedTicket()" class="unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g fill="#C9CED6">
+                                                    <g>
+                                                        <g>
+                                                            <path
+                                                                d="M5.846 4c-.917 0-1.142.043-1.368.164-.14.075-.239.174-.314.314-.12.226-.164.45-.164 1.368v12.308c0 .917.043 1.142.164 1.368.075.14.174.239.314.314.226.12.45.164 1.368.164h12.308c.917 0 1.142-.043 1.368-.164.14-.075.239-.174.314-.314.12-.226.164-.45.164-1.368V5.846c0-.917-.043-1.142-.164-1.368-.075-.14-.174-.239-.314-.314-.226-.12-.45-.164-1.368-.164H5.846zm0-2h12.308c1.337 0 1.822.14 2.311.4.49.262.873.646 1.134 1.135.262.489.401.974.401 2.31v12.31c0 1.336-.14 1.821-.4 2.31-.262.49-.646.873-1.135 1.134-.489.262-.974.401-2.31.401H5.844c-1.336 0-1.821-.14-2.31-.4-.49-.262-.873-.646-1.134-1.135-.262-.489-.401-.974-.401-2.31V5.844c0-1.336.14-1.821.4-2.31.262-.49.646-.873 1.135-1.134.489-.262.974-.401 2.31-.401z"
+                                                                transform="translate(-432 -512) translate(408 456) translate(24 56)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+                                        <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-594328,resizemode-1,msid-69381991/tech/internet/in-webs-dark-corner-your-profile-is-on-sale-for-just-a-few-bucks/hacker-1.jpg" alt="" />
+
+
+                                        <div class="profile-info">
+
+
+
+                                            <span class="main-text mr-3">Jeremías del Pozo</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#A7AEBB" fill-rule="evenodd"
+                                                    d="M13.344 1.344c.375 0 .687.125.937.375s.375.562.375.937v8c0 .375-.125.693-.375.953s-.562.391-.937.391H4l-2.656 2.656v-12c0-.375.125-.687.375-.937s.562-.375.937-.375h10.688z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">Messenger - 055 671 1781</p>
+                                            <button class="btn btn-info btn-lg">#0032</button>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-2">
+
+                                    <div class="row">
+                                        <div class="order-info">
+
+                                            <span class="main-text mr-3">Orders and requests</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path fill="#0DA8C7" fill-rule="evenodd"
+                                                    d="M7.344 6h1.312V4.656H7.344V6zM8 13.344c-1.5-.042-2.755-.568-3.766-1.578C3.224 10.756 2.698 9.5 2.656 8c.042-1.5.568-2.755 1.578-3.766C5.244 3.224 6.5 2.698 8 2.656c1.5.042 2.755.568 3.766 1.578C12.776 5.244 13.302 6.5 13.344 8c-.042 1.5-.568 2.755-1.578 3.766-1.01 1.01-2.266 1.536-3.766 1.578zm0-12c-1.896.041-3.469.687-4.719 1.937C2.031 4.531 1.385 6.104 1.344 8c.041 1.896.687 3.469 1.937 4.719 1.25 1.25 2.823 1.896 4.719 1.937 1.896-.041 3.469-.687 4.719-1.937 1.25-1.25 1.896-2.823 1.937-4.719-.041-1.896-.687-3.469-1.937-4.719C11.469 2.031 9.896 1.385 8 1.344zm-.656 10v-4h1.312v4H7.344z" />
+                                            </svg>
+
+
+
+                                            <p class="text-muted sub-text">Created 6 minutes ago</p>
+                                            <span class="sub-text">Due in </span>
+                                            <span class="order-time">00:02:03</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-4">
+                                    <!-- <div class="row">
+                                        <div class="pickup">
+
+                                            <span class="main-text mr-3">Pick up in </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#0076E8" fill-rule="evenodd"
+                                                    d="M5.016 11.016l1.5-4.5h10.968l1.5 4.5H5.016zm12.468 4.968c-.406 0-.75-.14-1.03-.421-.282-.282-.423-.633-.423-1.055 0-.422.14-.774.422-1.055.281-.281.633-.422 1.055-.422.422 0 .773.14 1.055.422.28.281.421.633.421 1.055 0 .422-.14.773-.422 1.055-.28.28-.64.421-1.078.421zm-10.968 0c-.438 0-.797-.14-1.079-.421-.28-.282-.421-.633-.421-1.055 0-.422.14-.774.421-1.055.282-.281.633-.422 1.055-.422.422 0 .774.14 1.055.422.281.281.422.633.422 1.055 0 .422-.14.773-.422 1.055-.281.28-.625.421-1.031.421zM18.937 6L21 12v8.016c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281h-1.032c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703v-1.032H6v1.032c0 .28-.094.515-.281.703-.188.187-.422.281-.703.281H3.984c-.28 0-.515-.094-.703-.281-.187-.188-.281-.422-.281-.703V12l2.063-6c.125-.281.312-.516.562-.703.25-.188.547-.281.89-.281h10.97c.343 0 .64.093.89.28.25.188.437.423.563.704z" />
+                                            </svg>
+                                            <p class="text-muted sub-text">2 minutes</p>
+                                        </div>
+
+                                    </div> -->
+                                    <div class="divisor"></div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="row">
+                                        <div class="order-details">
+                                            <li>
+                                                <span class="color-type"></span>
+                                                <span class="order-type main-text ml-3 mr-3">Normal</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <path fill="#8A94A6" fill-rule="evenodd"
+                                                        d="M6.172 7.148L10 10.977 13.828 7.148 15 8.32 10 13.32 5 8.32z" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M10 10.82c-1.25 0-2.637.28-4.16.84-1.524.56-2.363 1.4-2.52 2.52v2.5h13.36v-2.5c-.157-1.12-.996-1.96-2.52-2.52-1.523-.56-2.91-.84-4.16-.84zm0-7.5c-.938.026-1.719.352-2.344.977-.625.625-.937 1.413-.937 2.363s.312 1.738.937 2.363 1.406.938 2.344.938 1.719-.313 2.344-.938c.625-.625.937-1.412.937-2.363 0-.95-.312-1.738-.937-2.363S10.938 3.347 10 3.32zm0 9.102c1.302.026 2.46.247 3.477.664 1.015.417 1.549.781 1.601 1.094v.898H4.922v-.898c.052-.313.586-.677 1.601-1.094 1.016-.417 2.175-.638 3.477-.664zm0-7.5c.495 0 .905.17 1.23.508.326.338.489.755.489 1.25 0 .494-.163.905-.489 1.23-.325.326-.735.488-1.23.488s-.905-.162-1.23-.488c-.326-.325-.489-.736-.489-1.23 0-.495.163-.912.489-1.25.325-.339.735-.508 1.23-.508z"
+                                                                                    transform="translate(-1276 -518) translate(408 456) translate(868 28) translate(0 34)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Sales / Muhammad Oruc</span>
+                                            </li>
+                                            <li>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g fill="#23374D">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <g>
+                                                                                <path
+                                                                                    d="M2.93 15.43L1.68 14.18 7.93 7.93 11.25 11.25 17.148 4.57 18.32 5.781 11.25 13.75 7.93 10.43z"
+                                                                                    transform="translate(-1276 -550) translate(408 456) translate(868 28) translate(0 66)" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ordinary ml-3">Waiting on third party</span>
+                                            </li>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

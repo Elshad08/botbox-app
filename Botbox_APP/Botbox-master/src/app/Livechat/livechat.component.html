@@ -1,0 +1,169 @@
+<div id="frame" class="chat-frame">
+    <div class="content">
+        <div class="contact-profile">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6y5kan7ydWfYYcZzx1qy2bZQst8Q5Wie12Q&usqp=CAU" alt="" />
+            <p> {{agents.name[0]}} </p>
+            <span class="customer-name"> Messenger customer</span>
+            <div class="wrap">
+                <div class="profile-icons" [hidden]="isHidden">
+                    <a routerLink="/forward">
+                        <svg class="forward-item" data-toggle="modal" data-target="#myModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#1E2F42" fill-rule="evenodd"
+                                d="M3.984 11.016L15.984 11.016 10.5 5.484 11.906 4.078 19.828 12 11.906 19.922 10.5 18.516 15.984 12.984 3.984 12.984z" />
+                        </svg>
+                    </a>
+                    <svg class="ticket-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#1E2F42" fill-rule="evenodd"
+                            d="M3.984 3.984c-.562.032-1.03.235-1.406.61-.375.375-.562.843-.562 1.406v3.984c.562.032 1.03.235 1.406.61.375.375.562.843.562 1.406s-.187 1.031-.562 1.406c-.375.375-.844.578-1.406.61V18c0 .563.187 1.031.562 1.406.375.375.844.578 1.406.61h16.032c.562-.032 1.03-.235 1.406-.61.375-.375.562-.843.562-1.406v-3.984c-.562-.032-1.03-.235-1.406-.61-.375-.375-.562-.843-.562-1.406s.187-1.031.562-1.406c.375-.375.844-.578 1.406-.61V6c0-.563-.187-1.031-.562-1.406-.375-.375-.844-.578-1.406-.61H3.984zm0 2.016h16.032v2.531c-.625.375-1.118.867-1.477 1.477C18.18 10.618 18 11.28 18 12c0 .719.18 1.383.54 1.992.358.61.85 1.102 1.476 1.477V18H3.984v-2.531c.625-.375 1.118-.867 1.477-1.477C5.82 13.382 6 12.72 6 12c0-.719-.18-1.383-.54-1.992-.358-.61-.85-1.102-1.476-1.477V6z" />
+                    </svg>
+
+                    <a [routerLink]="'/close'">
+                        <svg data-toggle="modal" data-target="#myModal" class="complete-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#1E2F42" fill-rule="evenodd"
+                                d="M21 6.984L9 18.984 3.516 13.5 4.922 12.094 9 16.172 19.594 5.578z" />
+                        </svg>
+                    </a>
+                    <div class="divisor"></div>
+                    <a [routerLink]="'/profile'">
+                        <svg (click)=toggleDetail() xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#1E2F42">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M11.016 9h1.968V6.984h-1.968V9zM12 20.016c-2.25-.063-4.133-.852-5.648-2.368C4.836 16.133 4.047 14.25 3.984 12c.063-2.25.852-4.133 2.368-5.648C7.867 4.836 9.75 4.047 12 3.984c2.25.063 4.133.852 5.648 2.368C19.164 7.867 19.953 9.75 20.016 12c-.063 2.25-.852 4.133-2.368 5.648-1.515 1.516-3.398 2.305-5.648 2.368zm0-18c-2.844.062-5.203 1.03-7.078 2.906C3.047 6.797 2.078 9.156 2.016 12c.062 2.844 1.03 5.203 2.906 7.078 1.875 1.875 4.234 2.844 7.078 2.906 2.844-.062 5.203-1.03 7.078-2.906 1.875-1.875 2.844-4.234 2.906-7.078-.062-2.844-1.03-5.203-2.906-7.078C17.203 3.047 14.844 2.078 12 2.016zm-.984 15v-6h1.968v6h-1.968z"
+                                                        transform="translate(-1571 -116) translate(1571 116)" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <span class="detail-item">Details</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="messages" *ngIf="observable$ | async as ob" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+            <div class="text-center message-time">
+
+                <span>
+                    Chat started: Thu 20 Feb, 2020 | 11:01 AM
+                </span>
+            </div>
+
+            <ul *ngFor="let e of ob">
+                <li *ngIf="e.Type == '19'" class="sent">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6y5kan7ydWfYYcZzx1qy2bZQst8Q5Wie12Q&usqp=CAU" alt="" />
+                    <div class="sub-name text-left mb-2">{{agents.name[0]}}</div>
+
+                    <div class="message-content">
+                        <p>
+                            {{e.Text}}
+                        </p>
+                    </div>
+
+                </li>
+                <li *ngIf="e.Type == '0'" class="replies">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAQsNHaQM3tgPT5sbr8LcOZhm8hak44uQo8g&usqp=CAU" alt="" />
+                    <div class="sub-name text-right mb-2">
+                        Mahammad Oruc
+                    </div>
+
+                    <div class="message-content">
+                        <p>
+                            {{e.Text}}
+                        </p>
+                        <div class="canned-response" [hidden]="isCanned">
+
+                            <div class="save-item">
+                                <div class="save-as">
+                                    <span class="saved"> Save as canned response </span>
+                                </div>
+
+
+                                <a routerLink="/canned">
+                                    <svg class="add-item" data-toggle="modal" data-target="#myModal" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#0076E8">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <path
+                                                                            d="M15.82 10.82L10.82 10.82 10.82 15.82 9.18 15.82 9.18 10.82 4.18 10.82 4.18 9.18 9.18 9.18 9.18 4.18 10.82 4.18 10.82 9.18 15.82 9.18z"
+                                                                            transform="translate(-879 -433) translate(873 427) translate(6 6)" />
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <span class="canned-time"> 11:46 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="readable">
+
+                        <span>Read</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path fill="#8A94A6" fill-rule="evenodd"
+                                d="M14 4.656L6 12.656 2.344 9 3.281 8.063 6 10.781 13.063 3.719z" />
+                        </svg>
+
+                    </div> -->
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="message-input">
+
+            <div class="wrap">
+
+                <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value);postForm.reset()">
+                    <input type="text" placeholder="Message" id="content" required ngModel name="message">
+
+                    <svg (click)=cannedClick() class="canned-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#355374" fill-rule="evenodd"
+                            d="M12.614 21h2.045l.767-4.67h2.514l.333-2.046h-2.514l.664-4.023h2.532l.332-2.045h-2.531l.767-4.67h-2.046l-.767 4.67h-4.09l.766-4.67H9.341l-.767 4.67H6.06l-.333 2.045h2.514l-.664 4.023H5.045l-.332 2.046h2.531L6.477 21h2.046l.767-4.67h4.09L12.615 21zm-2.992-6.716l.665-4.023h4.09l-.664 4.023h-4.09z" />
+                    </svg>
+
+
+                    <svg class="attach-item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#355374" fill-rule="evenodd"
+                            d="M17.484 16.969c-.03 1.562-.562 2.86-1.593 3.89-1.032 1.032-2.328 1.563-3.891 1.594-1.563-.031-2.86-.562-3.89-1.594-1.032-1.03-1.579-2.328-1.641-3.89v-10.5C6.5 5.344 6.89 4.406 7.64 3.656s1.695-1.125 2.836-1.125c1.14 0 2.085.375 2.835 1.125s1.141 1.688 1.172 2.813v8.484c-.03.719-.28 1.313-.75 1.781-.468.47-1.054.703-1.757.703-.704 0-1.29-.234-1.758-.703-.469-.468-.719-1.062-.75-1.78v-7.5h1.5v7.5c.031.28.14.515.328.702.187.188.422.281.703.281.281 0 .516-.093.703-.28.188-.188.281-.423.281-.704V6.47c-.03-.719-.28-1.313-.75-1.782-.468-.468-1.054-.703-1.757-.703-.704 0-1.29.235-1.758.703-.469.47-.719 1.063-.75 1.782v10.5C8 18.094 8.39 19.03 9.14 19.78s1.695 1.125 2.836 1.125c1.14 0 2.085-.375 2.835-1.125s1.141-1.687 1.172-2.812V7.453h1.5v9.516z" />
+                    </svg>
+
+
+                    <div class="text-right">
+                        <span class="tag-item">ADD TAG</span>
+                        <button type="submit" (click)="onFetchPosts()" [disabled]="!postForm.valid">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#0076E8" fill-rule="evenodd"
+                                    d="M2.016 21L2.016 14.016 17.016 12 2.016 9.984 2.016 3 23.016 12z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

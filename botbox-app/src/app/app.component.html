@@ -1,4 +1,4 @@
-<div id="main-app">
+<!-- <div id="main-app">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-2 col-lg-2">
@@ -6,7 +6,7 @@
             </div>
             <div class="col-xl-10 col-lg-10 first">
                 <app-navbar style="z-index:2"></app-navbar>
-                <div class="row">
+                <div class="row paddingNo">
                     <div class="tt">
                         <app-support></app-support>
                     </div>
@@ -17,18 +17,22 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<style>
-    .tt {
-        width: 27%;
-    }
-    
-    .ss {
-        width: 73%;
-    }
-</style>
+
+
+<!-- <forms-close></forms-close> -->
+
+
+
 
 <router-outlet>
 </router-outlet>
+
+<h3>
+    <a [routerLink]="'/livechat'">  Click to open Livechat</a>
+</h3>
+
+
+<a [routerLink]="'/profile'">Click to open profile</a>

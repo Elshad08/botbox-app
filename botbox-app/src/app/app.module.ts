@@ -38,8 +38,35 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { TicketComponent } from './Tickets/ticket.component';
+import { EmptyChatComponent } from './Views/empty-chat/empty-chat.component';
+import { AgentChatComponent } from './Views/agent-chat/agent-chat.component';
+import { AgentProfileComponent } from './Views/agent-profile/agent-profile.component';
 
 const routes: Routes = [
+
+  {
+    path:'empty',
+    component: EmptyChatComponent
+  },
+  {
+    path:'close',
+    component: CloseComponent
+  },
+  {
+    path:'tickets',
+    component: TicketComponent
+  },
+
+  {
+    path: 'livechat',
+    component: AgentChatComponent
+  },
+
+  {
+    path: 'profile',
+    component: AgentProfileComponent
+  },
+
   {
     path: 'login',
     component: LoginComponent
@@ -108,7 +135,10 @@ const routes: Routes = [
     /* forms starts here*/
     CloseComponent,
     CannedComponent,
-    ForwardComponent
+    ForwardComponent,
+    EmptyChatComponent,
+    AgentChatComponent,
+    AgentProfileComponent
     /* forms ends here*/
 
   ],

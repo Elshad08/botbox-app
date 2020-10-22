@@ -1,5 +1,6 @@
 * {
     font-family: Inter;
+    padding-left: 0;
 }
 
 body {
@@ -12,9 +13,8 @@ body {
 
 /* Profile sidebar */
 
-* {
-    font-family: Inter;
-    padding-left: 0;
+.profile {
+    border: 1px solid #f7f8f9;
 }
 
 ul {
@@ -39,8 +39,8 @@ ul {
 .profile-userpic img {
     float: none;
     margin: 0 auto;
-    width: 50%;
-    height: 50%;
+    width: 80px;
+    height: 80px;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
@@ -48,12 +48,11 @@ ul {
 
 .profile-usertitle {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 4.5%;
 }
 
 .profile-usermenu .list-group .list-group-item {
-    margin-bottom: 5%;
-    border: none;
+    padding: 0;
     font-family: Inter;
     font-size: 14px;
     font-weight: 500;
@@ -61,11 +60,24 @@ ul {
     font-style: normal;
     line-height: 1.71;
     letter-spacing: normal;
-    color: #1e2f42
+    color: #1e2f42;
+    border: none;
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+    background-color: #f7f8f9;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .profile-usermenu .list-group .list-group-item svg {
     float: right;
+}
+
+.profile-usermenu .list-group {
+    margin-left: 24px;
 }
 
 .profile-usertitle-name {
@@ -104,7 +116,7 @@ ul {
 }
 
 .profile-usermenu {
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .profile-usermenu ul li a:hover {
@@ -130,4 +142,9 @@ ul {
     padding: 20px;
     background: #fff;
     min-height: 460px;
+}
+
+.user-button {
+    margin-right: 16px;
+    margin-left: 16px;
 }

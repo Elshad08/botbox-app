@@ -1,0 +1,329 @@
+* {
+    font-family: Inter;
+    outline: none!important;
+}
+
+.modal-dialog {
+    min-width: 38%;
+    float: right;
+    margin: 0;
+}
+
+.modal-dialog .modal-content {
+    min-height: 100vh;
+}
+
+.modal-body {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.modal .modal-body .inputText {
+    padding-left: 2%;
+    padding-bottom: 48%;
+    width: 100%;
+    height: 264px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.modal-header {
+    border: none;
+}
+
+.bottom-form {
+    height: 56px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    margin-top: 2%;
+}
+
+.shortcut-text {
+    text-align: initial;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #b0b7c3;
+}
+
+.canned-text {
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1e2f42;
+    text-align: initial;
+}
+
+.modal-header .save {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #1e2f42;
+    margin-left: 5%;
+}
+
+.modal-header button {
+    margin-right: 5%;
+}
+
+.mini-text {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #0da8c7;
+    text-align: initial;
+}
+
+.btn-cancel {
+    width: 184px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2f42;
+    border-radius: 4px;
+    border: solid 1px #b0b7c3;
+}
+
+.btn-save {
+    width: 184px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #c9ced6;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-footer {
+    border: none;
+}
+
+input:focus~.floating-label,
+input:not(:focus):valid~.floating-label {
+    /* top: 35px;
+    left: 20px;
+    font-size: 10px;
+    opacity: 1; */
+    display: none;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 130px;
+    transition: 0.1s ease all;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.form-bottom .inputText-sm {
+    padding-top: 4.4%;
+    padding-left: 11%;
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    border: solid 1px #e1e4e8;
+    background-color: #ffffff;
+}
+
+.form-bottom .inputText-sm::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #b0b7c3;
+}
+
+.form-bottom .input-group .search-item {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+}
+
+.form-bottom .input-group .collapse-item {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+}
+
+.form-bottom input::placeholder {
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+
+.form-items .search-item {
+    position: absolute;
+    left: 20px;
+    top: 54px;
+}
+
+.form-items .collapseBtn {
+    position: absolute;
+    right: 21px;
+    top: 54px;
+}
+
+.forward-item {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #b0b7c3;
+    position: absolute;
+    left: 50px;
+    top: 52px;
+}
+
+.chat-details {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+    margin-top: -10px;
+}
+
+.user-items {
+    margin-bottom: 6%;
+}
+
+.user-menu:hover {
+    background-color: #f1f2f4;
+}
+
+.text-left {
+    position: absolute;
+    bottom: 120px;
+    left: 25px;
+}
+
+.text-right {
+    position: absolute;
+    right: 12px;
+    bottom: 120px;
+}
+
+.text-left svg {
+    margin-right: 17px;
+}
+
+.form-top input {
+    padding-top: 1%;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden!important;
+}
+
+.user-menu img {
+    height: 40px;
+    width: 40px;
+    border-radius: 160px;
+    margin-right: 3.5%;
+    float: left;
+}
+
+.toggle-menu {
+    overflow-y: auto;
+    max-height: 60vh;
+    position: absolute;
+    top: 66px;
+    z-index: 1;
+    width: 100%;
+    height: fit-content;
+    border-radius: 4px;
+    box-shadow: 0 16px 26px -1px rgba(10, 22, 70, 0.1), 0 0 1px 0 rgba(10, 22, 70, 0.06);
+    background-color: #ffffff;
+}
+
+.toggle-menu .team-mates {
+    margin-bottom: 3.7%;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1e2f42;
+}
+
+.toggle-menu .user-menu .user-name {
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #4e5d78;
+}
+
+.toggle-menu .user-menu {
+    text-align: left;
+    margin-left: 5%;
+}
+
+.user-menu .user-sub {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #8a94a6;
+}

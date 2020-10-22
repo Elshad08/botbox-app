@@ -1,0 +1,11 @@
+.item-value {
+    float: right;
+}
+
+.dropdown-item {
+    padding: 0;
+}
+
+.dropdown-menu.show {
+    width: 17.5vw;
+}
