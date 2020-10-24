@@ -49,7 +49,8 @@
 
         </div>
 
-        <div class="messages" *ngIf="observable$ | async as ob" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <!-- <div class="messages" *ngIf="observable$ | async as ob" #scrollMe [scrollTop]="scrollMe.scrollHeight"> -->
+       <div class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
 
             <div class="text-center message-time">
 
@@ -58,7 +59,7 @@
                 </span>
             </div>
 
-            <ul *ngFor="let e of ob">
+            <ul *ngFor="let e of messages">
                 <li *ngIf="e.Type == '19'" class="sent">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6y5kan7ydWfYYcZzx1qy2bZQst8Q5Wie12Q&usqp=CAU" alt="" />
                     <div class="sub-name text-left mb-2">{{agents.name[0]}}</div>
